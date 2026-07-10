@@ -1,0 +1,186 @@
+.task-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(22rem,1fr));
+
+    gap:var(--space-lg);
+
+    width:100%;
+
+    padding:var(--space-lg);
+
+}
+
+.task-card{
+
+    background:var(--surface-card);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius-lg);
+
+    padding:1.4rem;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1.3rem;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+}
+
+.task-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.task-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:1rem;
+
+}
+
+.task-header h3{
+
+    font-size:1.2rem;
+
+    margin-bottom:.45rem;
+
+    color:var(--text-primary);
+
+}
+
+.task-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.task-description {
+    color: var(--text-secondary);
+    line-height: 1.5;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.status-badge{
+
+    padding:.45rem .9rem;
+
+    border-radius:999px;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+    white-space:nowrap;
+
+}
+
+.pending{
+
+    background:#fef3c7;
+
+    color:#92400e;
+
+}
+
+.progress{
+
+    background:#dbeafe;
+
+    color:#1d4ed8;
+
+}
+
+.completed{
+
+    background:#dcfce7;
+
+    color:#166534;
+
+}
+
+.task-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:1rem;
+
+}
+
+.task-meta{
+
+    display:flex;
+
+    gap:1rem;
+
+    align-items:center;
+
+}
+
+.priority{
+
+    padding:.3rem .8rem;
+
+    border-radius:999px;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+}
+
+.priority.low{
+
+    background:#ecfccb;
+
+    color:#3f6212;
+
+}
+
+.priority.medium{
+
+    background:#fef3c7;
+
+    color:#92400e;
+
+}
+
+.priority.high{
+
+    background:#fee2e2;
+
+    color:#b91c1c;
+
+}
+
+
+.task-actions{
+
+    display:flex;
+
+    gap:.8rem;
+
+}

@@ -1,0 +1,28 @@
+
+
+
+
+.app-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    transition: .3s ease;
+}
+
+app-header {
+    flex-shrink: 0;
+}
+
+.task-container {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.app-container.blur {
+    filter: blur(5px);
+    pointer-events: none;
+    user-select: none;
+}

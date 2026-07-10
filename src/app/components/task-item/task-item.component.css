@@ -1,0 +1,335 @@
+/* ===========================
+   MODAL OVERLAY
+=========================== */
+
+.modal-overlay {
+
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: var(--space-lg);
+
+    background: rgba(15, 23, 42, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    z-index: 1000;
+
+    animation: fadeIn .25s ease;
+}
+
+/* ===========================
+   MODAL CARD
+=========================== */
+
+.task-modal {
+
+    width: min(40rem, 95vw);
+
+    background: var(--surface-card);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow:
+        0 1rem 3rem rgba(0, 0, 0, .18),
+        0 .4rem 1rem rgba(0, 0, 0, .12);
+
+    overflow: hidden;
+
+    animation: popIn .25s ease;
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.modal-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: var(--space-md);
+
+    padding: var(--space-lg);
+
+    border-bottom: .08rem solid var(--border);
+
+}
+
+.modal-header h2 {
+
+    font-size: var(--fs-lg);
+    color: var(--text-primary);
+    margin-bottom: .5rem;
+
+}
+
+/* ===========================
+   PRIORITY BADGES
+=========================== */
+
+.priority {
+
+    display: inline-block;
+
+    padding: .35rem .8rem;
+
+    border-radius: 999px;
+
+    font-size: var(--fs-sm);
+
+    font-weight: 600;
+
+}
+
+.priority.low {
+
+    background: #dcfce7;
+    color: var(--success);
+
+}
+
+.priority.medium {
+
+    background: #fef3c7;
+    color: #b45309;
+
+}
+
+.priority.high {
+
+    background: #fee2e2;
+    color: var(--danger);
+
+}
+
+/* ===========================
+   CLOSE BUTTON
+=========================== */
+
+.close-btn {
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    border: none;
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: var(--text-secondary);
+
+    cursor: pointer;
+
+    transition: var(--transition);
+
+}
+
+.close-btn:hover {
+
+    background: var(--primary-light);
+
+    color: var(--primary);
+
+}
+
+/* ===========================
+   BODY
+=========================== */
+
+.modal-body {
+
+    padding: var(--space-lg);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+
+}
+
+.detail {
+
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+}
+
+.detail label {
+
+    font-weight: 600;
+    color: var(--text-secondary);
+
+}
+
+.detail p {
+
+    color: var(--text-primary);
+    line-height: 1.7;
+
+}
+
+/* ===========================
+   STATUS BADGES
+=========================== */
+
+.status-badge {
+
+    width: fit-content;
+
+    padding: .4rem .9rem;
+
+    border-radius: 999px;
+
+    font-size: var(--fs-sm);
+
+    font-weight: 600;
+
+}
+
+.pending {
+
+    background: #fef3c7;
+    color: #b45309;
+
+}
+
+.progress {
+
+    background: var(--primary-light);
+    color: var(--primary);
+
+}
+
+.completed {
+
+    background: #dcfce7;
+    color: var(--success);
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.modal-footer {
+
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-sm);
+
+    padding: var(--space-lg);
+
+    border-top: .08rem solid var(--border);
+
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes popIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px) scale(.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+
+    }
+
+}
+
+.detail input,
+.detail textarea,
+.detail select {
+
+    width: 100%;
+
+    padding: .8rem 1rem;
+
+    border: .08rem solid var(--border);
+
+    border-radius: var(--radius-md);
+
+    background: var(--surface-card);
+
+    color: var(--text-primary);
+
+    transition: var(--transition);
+
+}
+
+.detail textarea {
+
+    resize: vertical;
+
+    min-height: 7rem;
+
+}
+
+.detail input:focus,
+.detail textarea:focus,
+.detail select:focus {
+
+    outline: none;
+
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 .2rem rgba(37,99,235,.15);
+
+}
+
+.error {
+
+    margin-top: .35rem;
+
+    color: var(--danger);
+
+    font-size: .85rem;
+
+    font-weight: 500;
+
+}
+
+.detail input.ng-invalid.ng-touched,
+.detail textarea.ng-invalid.ng-touched,
+.detail select.ng-invalid.ng-touched {
+
+    border-color: var(--danger);
+
+}
+
+.detail input.ng-valid.ng-touched,
+.detail textarea.ng-valid.ng-touched,
+.detail select.ng-valid.ng-touched {
+
+    border-color: var(--success);
+
+}
