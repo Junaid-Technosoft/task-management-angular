@@ -364,6 +364,36 @@
 
     }
 
+    .modal-header {
+
+        margin-bottom: 0;
+
+    }
+
+    .modal-header h2 {
+
+        margin-bottom: 0;
+
+    }
+
+    .modal-body {
+
+        gap: 1rem;
+
+    }
+
+    .detail {
+
+        gap: .35rem;
+
+    }
+
+    .detail textarea {
+
+        min-height: 5rem;
+
+    }
+
     .modal-footer {
 
         flex-direction: column-reverse;
@@ -373,6 +403,65 @@
     .modal-footer .btn {
 
         width: 100%;
+
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .modal-overlay {
+
+        padding: .6rem;
+
+    }
+
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+
+        padding: .8rem;
+
+    }
+
+    .modal-header h2 {
+
+        font-size: 1.15rem;
+
+    }
+
+    .priority,
+    .status-badge {
+
+        font-size: .72rem;
+
+        padding: .3rem .6rem;
+
+    }
+
+    .detail input,
+    .detail textarea,
+    .detail select {
+
+        padding: .6rem .8rem;
+
+    }
+
+    .detail textarea {
+
+        min-height: 4.5rem;
+
+    }
+
+    .modal-body {
+
+        gap: .8rem;
+
+    }
+
+    .detail label {
+
+        font-size: .85rem;
 
     }
 

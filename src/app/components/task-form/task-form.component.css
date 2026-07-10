@@ -177,6 +177,26 @@ small{
 
     }
 
+    .modal-header {
+
+        margin-bottom: 1rem;
+
+    }
+
+    .form-group {
+
+        gap: .35rem;
+
+        margin-bottom: .7rem;
+
+    }
+
+    textarea {
+
+        min-height: 5rem;
+
+    }
+
     .row {
 
         grid-template-columns: 1fr;
@@ -185,6 +205,8 @@ small{
 
     .actions {
 
+        margin-top: 1rem;
+
         flex-direction: column-reverse;
 
     }
@@ -192,6 +214,52 @@ small{
     .actions .btn {
 
         width: 100%;
+
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .modal {
+
+        width: 100%;
+
+        padding: 1rem;
+
+        border-radius: var(--radius-md);
+
+    }
+
+    .modal-header h2 {
+
+        font-size: 1.15rem;
+
+    }
+
+    input,
+    textarea,
+    select {
+
+        padding: .6rem .8rem;
+
+    }
+
+    textarea {
+
+        min-height: 4.5rem;
+
+    }
+
+    .form-group {
+
+        margin-bottom: .5rem;
+
+    }
+
+    label {
+
+        font-size: .9rem;
 
     }
 
