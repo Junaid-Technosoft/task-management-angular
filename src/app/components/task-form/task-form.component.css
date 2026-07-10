@@ -158,3 +158,41 @@ small{
     font-size:.8rem;
 
 }
+
+/* ===========================
+   RESPONSIVE (MOBILE)
+=========================== */
+
+@media (max-width: 480px) {
+
+    .modal {
+
+        width: 95%;
+
+        padding: 1.4rem;
+
+        max-height: 90vh;
+
+        overflow-y: auto;
+
+    }
+
+    .row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .actions {
+
+        flex-direction: column-reverse;
+
+    }
+
+    .actions .btn {
+
+        width: 100%;
+
+    }
+
+}

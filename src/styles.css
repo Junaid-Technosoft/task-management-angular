@@ -198,3 +198,23 @@ select{
     transform: none;
     box-shadow: none;
 }
+
+/* ===========================
+   RESPONSIVE (MOBILE)
+=========================== */
+
+@media (max-width: 768px) {
+    :root {
+        --header-height: 3.8rem;
+        --space-lg: 1.4rem;
+        --space-xl: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --space-md: 1rem;
+        --space-lg: 1rem;
+        --space-xl: 1.6rem;
+    }
+}
